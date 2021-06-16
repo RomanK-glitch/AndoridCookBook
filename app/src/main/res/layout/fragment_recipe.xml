@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/content_start"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintGuide_begin="16dp"
+                android:orientation="vertical"
+        />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/content_end"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintGuide_end="16dp"
+                android:orientation="vertical"
+        />
+
+        <TextView
+                android:id="@+id/recipe_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/recipe"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <ImageView
+                android:id="@+id/recipe_image_view"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/pasta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipe_name_text_view"
+                android:contentDescription="@string/recipe_image"
+                android:adjustViewBounds="true"
+        />
+
+        <TextView
+                android:id="@+id/additional_info_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/additional_recipe_info"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintEnd_toEndOf="@+id/content_end"
+                app:layout_constraintTop_toBottomOf="@id/recipe_image_view"
+        />
+
+        <TextView
+                android:id="@+id/ingredients_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="@string/ingredients"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintTop_toBottomOf="@id/additional_info_text_view"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ingredients_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintTop_toBottomOf="@id/ingredients_text_view"
+        />
+
+        <TextView
+                android:id="@+id/preparation_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="@string/preparation"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintTop_toBottomOf="@id/ingredients_recycler_view"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/preparation_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintTop_toBottomOf="@id/preparation_text_view"
+        />
+
+        <Button
+                android:id="@+id/edit_recipe_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/preparation_recycler_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/edit"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

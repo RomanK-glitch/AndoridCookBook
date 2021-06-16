@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CookBook</string>
+    <string name="recipe_image">recipe image</string>
+    <string name="edit">Edit</string>
+    <string name="recipe">Recipe</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="preparation">Preparation</string>
+    <string name="additional_recipe_info">Additional info</string>
+    <string name="new_recipe">New Recipe</string>
+</resources>
